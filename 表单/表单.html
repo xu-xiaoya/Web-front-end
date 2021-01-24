@@ -1,0 +1,156 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>表单示例</title> 
+<style> 
+#form {
+  margin: auto;
+  border: 1px solid #999; 
+  background: #fffff8;
+  font-size: 10.5pt;
+  width: 500px;
+  height: 450px;
+  padding: 5px;
+}
+div {
+  margin: 12px 0;
+}
+div.submit  {
+  margin-left: 150px;
+}
+#caption { 
+  font-size: 14pt;
+  color: #36c; 
+  text-align: center;
+  font-weight: bold;
+}
+label.field {
+  display: block;
+  float: left;
+  width: 120px;
+  text-align: left;
+  margin-left: 20px;
+}
+input {
+  font-size: 10.5pt;
+}
+#e {
+  float: left;
+}
+#f {
+  transform: translateX(20px);
+  float: left;
+}
+#m {
+  float: left;
+}
+#cm {
+  float: left;
+}
+#s {
+  float: left;
+}
+#wen {
+  transform: translateY(-20px) translateX(20px);
+  float: left;
+  color:  gray;
+  font-size: 3px;
+}
+
+.submit {
+  transform: translateY(30px);
+  float: left;
+}
+#yan {
+  float: left;
+}
+
+#yanzheng {
+  transform:translateY(170px);
+}
+a {
+  text-decoration: none;
+  color : blue;
+}
+a:hover {
+  text-decoration: underline;
+  color : blue;
+}
+#xieyi{
+  float: left;
+  transform: translateX(140px) translateY(30px);
+  width: 100%;
+}
+</style>  
+</head>  
+<body> 
+<!--
+  form的特性action：提交后对数据的处理、method：发送服务器的方式、name（id）
+  post：将数据隐藏在HTTP头中
+-->
+<form action="form_action.asp" method="post" name="form1">
+<div id="form">
+<div id="caption">用 户 注 册</div>
+
+<div id = "e">
+    <label class="field" for="email">* E-mail：</label>
+    <input type="email" name="email">
+</div>
+
+<div id = "f">
+  <label >  @</label>
+  <select name="you" style="width:80px;">
+    <option value="0">请选择</option>
+    <option value="163.com">163.com</option>
+    <option value="qq.com">qq.com</option>
+  </select>
+</div>
+
+<div id = "m">
+  <label class="field" for="password1">* 密码：</label>
+  <input type="password" name="password1">
+</div>
+
+<div id = "cm">
+  <label class="field" for="password2">* 确认密码：</label>
+  <input type="password" name="password2">
+</div>
+
+<div id = "s">
+  <label class="field" for="phone">* 手机号码：</label>
+  <!--placeholder：示例值-->
+  <input type="tel" name="phone" pattern = "13\d{9}" placeholder="格式：13×××××××××">
+</div>
+<div id = "wen">
+  <p>请编辑短信：222发送到106981630163222，以确保账号安全。</p>
+</div>
+<div id = "yan">
+    <label class="field" for="yanzheng">* 验证码：</label>
+    <input type="yanzheng" name="yanzheng" style="width:150px;">
+  </div>
+  
+  
+<div id = "yanzheng">
+    <a href=""><img src="image/1.jpg"  /></a>
+  
+</div>
+<div id = "yanzheng">
+
+    <a href="">看不清楚？换张图片</a>
+</div>
+<div id = "xieyi">
+   <input type="checkbox" name="tiaokuan" value="tiaokuan"><label>同意</label>
+   
+   <a href>《服务条款》</a>
+   <a href>《隐私政策》</a>
+</div>
+<div class="submit">
+  <input type="submit" value="已发送短信验证，立即注册" style="width:200px;">
+</div>
+</div>
+</form>
+
+<br>
+</body> 
+</html>
